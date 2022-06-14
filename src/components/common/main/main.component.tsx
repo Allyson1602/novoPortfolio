@@ -10,7 +10,7 @@ export const Main: FC = () => {
         <div className="art-app">
             <MobileTopBar />
             <Wrapper />
-            <Preloader />
+            {/* <Preloader /> */}
         </div>
     );
 };

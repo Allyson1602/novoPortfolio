@@ -10,7 +10,7 @@ const Wrapper: FC = () => {
           <div className="art-app-container">
             <Bar />
             <Content />
-            <MenuBar />
+            {/* <MenuBar /> */}
           </div>
         </div>
     );
