@@ -16,6 +16,10 @@
     background-image: url(../../issets/images/bg.jpg);
 }
 
+.art-content .art-banner .art-buttons-frame {
+    display: flex;
+}
+
 .art-app .art-app-wrapper .art-app-container .art-content .art-curtain {
     background: rgba(30, 30, 40, 0.88);
     position: absolute;
@@ -63,4 +67,22 @@
 
 .art-app-onepage .art-app-wrapper .art-app-container .art-content {
     padding-right: 0; 
+}
+
+.art-content .art-links-frame {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-left: 1em;
+}
+
+.art-content .art-links-frame svg {
+    vertical-align: sub;
 }

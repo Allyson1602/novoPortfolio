@@ -1,3 +1,6 @@
+import Counter from 'components/counter/counter.component';
+import TextTyping from 'components/tools/text-typing/text-typing.component';
+import { DownloadSimple } from 'phosphor-react';
 import { FC } from 'react';
 import './content.style.css';
 
@@ -25,11 +28,24 @@ const Content: FC = () => {
                       <div className="art-banner-dec"></div>
                       <div className="art-banner-overlay">
                         <div className="art-banner-title">
-                          <h1 className="mb-15">Descubra o meu incrível <br />espaço de arte!</h1>
-                          <div className="art-lg-text art-code mb-25">&lt;<i>code</i>&gt; I build <span className="txt-rotate" data-period="2000"
-                              data-rotate='[ "web interfaces.", "ios and android applications.", "design mocups.", "automation tools." ]'></span>&lt;/<i>code</i>&gt;</div>
+                          <h1 className="mb-15">Descubra o meu incrível <br />espaço de desenvolvimento!</h1>
+                          <div className="art-lg-text art-code mb-25">
+                            &lt;<i>code</i>&gt;Eu desenvolvo
+
+                            <span
+                              className="txt-rotate" 
+                            >
+                              <TextTyping texts={["facilidade", "agilidade", "arte", "qualidade", "renda"]} />
+                            </span>
+                            
+                            &lt;/<i>code</i>&gt;
+                          </div>
                           <div className="art-buttons-frame">
-                            <a href="portfolio-3-col-masonry.html" className="art-btn art-btn-md"><span>Explore now</span></a>
+                            <a href="portfolio-3-col-masonry.html" className="art-btn art-btn-md"><span>Ver trabalhos</span></a>
+
+                            <div className="art-links-frame p-15-15">
+                              <a href="files/cv.txt" className="art-link" download data-no-swup>Baixar currículo <DownloadSimple size={15} weight="bold" /></a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -40,57 +56,7 @@ const Content: FC = () => {
 
               </div>
 
-              <div className="container-fluid">
-
-                <div className="row p-30-0">
-
-                  <div className="col-md-3 col-6">
-
-                    <div className="art-counter-frame">
-                      <div className="art-counter-box">
-                        <span className="art-counter">10</span><span className="art-counter-plus">+</span>
-                      </div>
-                      <h6>Years Experience</h6>
-                    </div>
-
-                  </div>
-
-                  <div className="col-md-3 col-6">
-
-                    <div className="art-counter-frame">
-                      <div className="art-counter-box">
-                        <span className="art-counter">143</span>
-                      </div>
-                      <h6>Completed Projects</h6>
-                    </div>
-
-                  </div>
-
-                  <div className="col-md-3 col-6">
-
-                    <div className="art-counter-frame">
-                      <div className="art-counter-box">
-                        <span className="art-counter">114</span>
-                      </div>
-                      <h6>Happy Customers</h6>
-                    </div>
-
-                  </div>
-
-                  <div className="col-md-3 col-6">
-
-                    <div className="art-counter-frame">
-                      <div className="art-counter-box">
-                        <span className="art-counter">20</span><span className="art-counter-plus">+</span>
-                      </div>
-                      <h6>Honors and Awards</h6>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
+              <Counter />
 
               <div className="container-fluid">
 

@@ -1,5 +1,5 @@
 import { easeQuadInOut } from 'd3-ease';
-import { LinkedinLogo, GithubLogo, InstagramLogo, DotsThreeOutlineVertical, ArrowsOut, Check, DownloadSimple } from 'phosphor-react';
+import { LinkedinLogo, GithubLogo, InstagramLogo, DotsThreeOutlineVertical, ArrowsOut, Check } from 'phosphor-react';
 import { Line } from 'rc-progress';
 import { FC } from 'react';
 import { buildStyles, CircularProgressbar } from 'react-circular-progressbar';
@@ -229,14 +229,6 @@ const Bar: FC = () => {
                 <li><Check size={12} weight="bold" />Node, Npm, ReactJS, Axios</li>
                 <li><Check size={12} weight="bold" />Webpack, Design Pattern, Solid, TDD</li>
               </ul>
-
-              <div className="art-ls-divider"></div>
-
-              <div className="art-links-frame p-15-15">
-
-                <a href="files/cv.txt" className="art-link" download data-no-swup>Download cv <DownloadSimple size={15} weight="bold" /></a>
-
-              </div>
 
             </div>
 
