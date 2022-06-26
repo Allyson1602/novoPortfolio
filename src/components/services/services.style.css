@@ -1,0 +1,38 @@
+.services {
+    overflow: auto;
+}
+
+.services .art-service-icon-box {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+    box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+    background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%); 
+}
+
+.services .art-service-icon-box {
+    width: 266px;
+}
+
+.services .art-service-icon-box .art-service-ib-content {
+    padding: 30px; 
+}
+
+.services .art-service-icon-box .art-service-ib-content .art-service-ib-icon {
+    position: absolute;
+    right: 10px;
+    bottom: -45px;
+    opacity: 0.03;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100px;
+    -ms-flex-item-align: center;
+    align-self: center; 
+}
+
+.services .art-buttons-frame .art-link.art-color-link svg {
+    vertical-align: text-top;
+}

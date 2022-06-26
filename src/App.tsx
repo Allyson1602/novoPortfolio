@@ -1,12 +1,11 @@
-import { Main } from 'components/common/main/main.component';
+import Router from './router';
+
 import './app.style.css';
 
 function App() {
 
 	return (
-		<div className="app">
-			<Main />
-		</div>
+		<Router />
 	);
 }
 

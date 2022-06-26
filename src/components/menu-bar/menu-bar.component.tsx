@@ -1,59 +1,82 @@
 import { FC } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import './menu-bar.style.css';
 
-const MenuBar: FC = () => {
+interface IMenuBarProps {
+	barActive: boolean;
+	menuActive: boolean;
+	setMenuActive: (status: boolean) => void;
+}
+
+const MenuBar: FC<IMenuBarProps> = ({ barActive, menuActive, setMenuActive }: IMenuBarProps) => {
+    let location = useLocation();
+  
+	let getCurrentPageText = () => {
+		switch(location.pathname) {
+			case "/":
+				return "Home";
+
+			case "/portfolio":
+				return "Portfólio";
+
+			case "/contact":
+				return "Contato";
+			
+			default:
+				return "";
+		}
+	};
+
     return (
-        <div className="art-menu-bar">
+        <div className={`art-menu-bar ${ menuActive ? 'art-active' : '' }`}>
 
           <div className="art-menu-bar-frame">
 
-            <div className="art-menu-bar-header">
-              <div className="art-menu-bar-btn">
-                <span></span>
-              </div>
-            </div>
+			{!barActive &&
+				<div className="art-menu-bar-header">
+				<button className={`art-menu-bar-btn ${ menuActive ? 'art-active' : '' }`} onClick={() => setMenuActive(!menuActive)}>
+					<span></span>
+				</button>
+				</div>
+			}
 
-            <div className="art-current-page"></div>
+            <div className="art-current-page">{getCurrentPageText()}</div>
 
             <div className="art-scroll-frame">
-
               <nav id="swupMenu">
                 <ul className="main-menu">
-                  <li className="menu-item current-menu-item"><a href="home.html">Home</a></li>
-                  <li className="menu-item menu-item-has-children">
-                    <a href="#." data-no-swup>Portfolio</a>
-                    <ul className="sub-menu">
-                      <li className="menu-item"><a href="portfolio-2-col.html">2 column</a></li>
-                      <li className="menu-item"><a href="portfolio-3-col.html">3 column</a></li>
-                      <li className="menu-item"><a href="portfolio-2-col-masonry.html">2 column masonry</a></li>
-                      <li className="menu-item"><a href="portfolio-3-col-masonry.html">3 column masonry</a></li>
-                      <li className="menu-item"><a href="portfolio-single.html">Single project</a></li>
-                      <li className="menu-item"><a href="portfolio-single-2.html">Single project 2</a></li>
-                    </ul>
-                  </li>
-                  <li className="menu-item"><a href="history.html">History</a></li>
-                  <li className="menu-item"><a href="contact.html">Contact</a></li>
-                  <li className="menu-item menu-item-has-children">
-                    <a href="#." data-no-swup>Blog</a>
-                    <ul className="sub-menu">
-                      <li className="menu-item"><a href="blog-2-col.html">2 column</a></li>
-                      <li className="menu-item"><a href="blog-3-col.html">3 column</a></li>
-                      <li className="menu-item"><a href="blog-post.html">Publication</a></li>
-                    </ul>
-                  </li>
-                  <li className="menu-item"><a href="onepage.html" target="_blank" data-no-swup>Onepage</a></li>
+					<li className="menu-item">
+						<NavLink
+							to="/"
+							className={({ isActive }) => isActive ? 'current-menu-item' : ''}
+							onClick={() => setMenuActive(!menuActive)}
+						>Home</NavLink>
+					</li>
+
+					<li className="menu-item">
+						<NavLink
+							to="/portfolio"
+							className={({ isActive }) => isActive ? 'current-menu-item' : ''}
+							onClick={() => setMenuActive(!menuActive)}
+						>Portólio</NavLink>
+					</li>
+
+					<li className="menu-item">
+						<NavLink
+							to="/contact"
+							className={({ isActive }) => isActive ? 'current-menu-item' : ''}
+							onClick={() => setMenuActive(!menuActive)}
+						>Contato</NavLink>
+					</li>
                 </ul>
               </nav>
 
-              <ul className="art-language-change">
-                <li><a href="#.">FR</a></li>
-                <li className="art-active-lang"><a href="#.">EN</a></li>
-              </ul>
-
+              {/* <ul className="art-language-change">
+                <li><Link to="#.">EN</Link></li>
+                <li className="art-active-lang"><Link to="#.">BR</Link></li>
+              </ul> */}
             </div>
-
           </div>
-
         </div>
     );
 };

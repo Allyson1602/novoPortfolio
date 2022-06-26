@@ -1,6 +1,7 @@
 .counter.container-fluid .row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding-top: 0;
 }
 
 .counter .art-counter-frame {
@@ -22,7 +23,7 @@
 }
 
 .counter .art-counter-frame .art-counter-box .art-counter {
-    color: #FFC107;
+    color: #ffc107;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
     font-size: 22px; 
@@ -30,7 +31,7 @@
 
 /* .counter .art-counter-frame .art-counter-box .art-counter-plus {
     margin-left: 3px;
-    color: #FFC107;
+    color: #ffc107;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
     font-size: 22px; 

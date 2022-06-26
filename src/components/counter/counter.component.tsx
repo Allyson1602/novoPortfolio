@@ -41,17 +41,6 @@ const Counter: FC = () => {
 
             </div>
 
-            <div className="col-md-3 col-6">
-
-              <div className="art-counter-frame">
-                <div className="art-counter-box">
-                  <span className="art-counter">0</span>
-                </div>
-                <h6>Prêmios</h6>
-              </div>
-
-            </div>
-
           </div>
 
         </div>

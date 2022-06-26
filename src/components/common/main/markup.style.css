@@ -1,0 +1,295 @@
+/* ------------------------------ app marcup ------------------------------ */
+/* ----- top background ----- */
+.art-top-bg {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-position: center;
+    height: 400px;
+    background-size: cover;
+}
+.art-top-bg .art-top-bg-overlay {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(180deg, rgba(30, 30, 40, .93) 0%, rgba(30, 30, 40, .96) 70%, rgba(30, 30, 40, .99) 80%, rgba(30, 30, 40, 1) 100%);
+}
+/* ----- preloader ----- */
+.art-preloader {
+    margin: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 30px);
+    height: calc(100vh - 30px);
+    background: rgba(32, 32, 42, 1);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.art-preloader .art-preloader-content {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.art-preloader .art-preloader-content .art-preloader-load {
+    margin-top: 5px;
+    width: 200px;
+}
+.art-preloader .art-preloader-content .art-preloader-load .progressbar-text {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400 !important;
+    color: rgba(140, 140, 142, 1) !important;
+    height: 300px;
+    line-height: 350px;
+}
+.art-preloader-load path:first-child {
+    stroke: rgba(25, 25, 35, 1);
+}
+.art-preloader-load path:last-child {
+    stroke: #ffc107;
+}
+/* ----- scroll frame ----- */
+.art-scroll-frame {
+    width: 100%;
+    height: calc(100vh - 80px);
+    overflow: auto;
+}
+.scrollbar-track {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+/* ----- app ----- */
+.art-app {
+    padding: 15px;
+    background: rgba(25, 25, 35, 1);
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+   /* ----- mobile top bar ----- */
+}
+.art-app * {
+    scrollbar-width: none;
+}
+.art-app ::-webkit-scrollbar {
+    display: none;
+}
+.art-app .art-mobile-top-bar {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 70px;
+    background: rgba(32, 32, 42, 1);
+    box-shadow: 0 3px 8px 0 rgba(15, 15, 20, .2);
+    padding: 0 30px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+.art-app .art-app-wrapper {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(30, 30, 40, 1);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3px 8px 0 rgba(15, 15, 20, .2);
+}
+.art-app .art-app-wrapper .art-app-container {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+   /* ----- info bar ----- */
+   /* ----- content ----- */
+   /* ----- menu bar ----- */
+}
+.art-app .art-app-wrapper .art-app-container .art-info-bar .art-info-bar-frame {
+    padding: 0 15px;
+}
+.art-app .art-app-wrapper .art-app-container .art-info-bar .art-info-bar-frame .art-info-bar-header {
+    width: 100%;
+    height: 70px;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999999999999;
+    display: none;
+}
+.art-app .art-app-wrapper .art-app-container .art-info-bar .art-info-bar-frame .art-info-bar-header .art-info-bar-btn {
+    margin-left: auto;
+    pointer-events: all;
+    font-size: 14px;
+    padding: 30px;
+}
+.art-app .art-app-wrapper .art-app-container .art-info-bar .art-info-bar-frame .art-info-bar-header .art-info-bar-btn.art-disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+.art-app .art-app-wrapper .art-app-container .art-info-bar .art-info-bar-frame .art-scroll-frame .scroll-content {
+    padding: 240px 0 50px;
+}
+.art-app .art-app-wrapper .art-app-container .art-content {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: calc(100vh - 30px);
+    padding-right: 80px;
+    transition: 0.55s ease-in-out;
+}
+/* .art-app .art-app-wrapper .art-app-container .art-content .art-curtain {
+    background: rgba(30, 30, 40, .88);
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.55s ease-in-out;
+} */
+.art-app .art-app-wrapper .art-app-container .art-content.art-active {
+    transform: translateX(-150px);
+}
+.art-app .art-app-wrapper .art-app-container .art-content.art-active .art-curtain {
+    pointer-events: all;
+    opacity: 0.7;
+}
+.art-app .art-app-wrapper .art-app-container .art-menu-bar .art-menu-bar-frame {
+    position: relative;
+}
+.art-app .art-app-wrapper .art-app-container .art-menu-bar .art-menu-bar-frame .art-menu-bar-header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    box-shadow: 0 1px 4px 0 rgba(15, 15, 20, .1);
+    background: linear-gradient(159deg, rgba(37, 37, 50, .98) 0%, rgba(35, 35, 45, .98) 100%);
+}
+.art-app .art-app-wrapper .art-app-container .art-menu-bar .art-menu-bar-frame .art-menu-bar-header .art-menu-bar-btn {
+    pointer-events: all;
+}
+.art-app .art-app-wrapper .art-app-container .art-menu-bar .art-menu-bar-frame .art-menu-bar-header .art-menu-bar-btn.art-disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+.art-app .art-app-wrapper .art-app-container .art-menu-bar.art-active {
+    transform: translateX(-150px);
+}
+/* ------------------------------ app marcup (after 920px) ------------------------------ */
+@media (max-width: 920px) {
+   /* ----- container ----- */
+   /* ----- preloader ----- */
+   /* ----- scroll frame ----- */
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+   }
+    .art-preloader {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+   }
+    .art-scroll-frame {
+        height: calc(100vh - 50px);
+   }
+    .art-app {
+        padding: 0;
+       /* ----- mobile top bar ----- */
+   }
+    .art-app .art-mobile-top-bar {
+        display: flex;
+   }
+    .art-app .art-app-wrapper {
+        border-radius: 0;
+        height: 100vh;
+   }
+    .art-app .art-app-wrapper .art-app-container {
+        width: 100%;
+       /* ----- info bar ----- */
+       /* ----- content ----- */
+       /* ----- menu bar ----- */
+   }
+    .art-app .art-app-wrapper .art-app-container .art-info-bar {
+        position: absolute;
+        left: -290px;
+        width: 290px;
+        height: 100vh;
+   }
+    .art-app .art-app-wrapper .art-app-container .art-info-bar.art-active {
+        transform: translateX(290px);
+   }
+    .art-app .art-app-wrapper .art-app-container .art-info-bar .art-info-bar-frame .art-info-bar-header {
+        display: flex;
+   }
+    .art-app .art-app-wrapper .art-app-container .art-info-bar .art-info-bar-frame .art-info-bar-header .art-info-bar-btn {
+        transform: translateX(70px);
+        transition: 0.4s ease-in-out;
+   }
+    .art-app .art-app-wrapper .art-app-container .art-info-bar.art-active .art-info-bar-frame .art-info-bar-btn {
+        transform: translateX(0);
+   }
+    .art-app .art-app-wrapper .art-app-container .art-content {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        padding-right: 0;
+        padding-top: 70px;
+   }
+    .art-app .art-app-wrapper .art-app-container .art-content .art-scroll-frame {
+        height: calc(100vh - 70px);
+   }
+    .art-app .art-app-wrapper .art-app-container .art-content.art-active {
+        transform: none;
+   }
+    .art-app .art-app-wrapper .art-app-container .art-content.art-active .art-curtain {
+        pointer-events: all;
+        opacity: 1;
+   }
+    .art-app .art-app-wrapper .art-app-container .art-menu-bar {
+        position: absolute;
+        right: -230px;
+        width: 230px;
+        height: 100vh;
+   }
+    .art-app .art-app-wrapper .art-app-container .art-menu-bar.art-active {
+        transform: translateX(-230px);
+   }
+    .art-app .art-app-wrapper .art-app-container .art-menu-bar .art-menu-bar-btn {
+        transform: translateX(-80px);
+        transition: 0.4s ease-in-out;
+   }
+    .art-app .art-app-wrapper .art-app-container .art-menu-bar.art-active .art-menu-bar-btn {
+        transform: translateX(0);
+   }
+}
+/* ------------------------------ app marcup (after 290px) ------------------------------ */
+@media (max-width: 290px) {
+   /* ----- info bar ----- */
+    .art-app .art-info-bar {
+        width: 100vw;
+   }
+}
+/* ------------------------------ app marcup (after 230px) ------------------------------ */
+@media (max-width: 230px) {
+   /* ----- menu bar ----- */
+    .art-app .art-menu-bar {
+        width: 100vw;
+   }
+}
+.art-app-onepage .art-app-wrapper .art-app-container .art-content {
+    padding-right: 0;
+}

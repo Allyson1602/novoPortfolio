@@ -3,7 +3,9 @@ import MobileTopBar from "../mobile-top-bar/mobile-top-bar.component";
 import Preloader from "../preloader/preloader.component";
 import Wrapper from "../wrapper/wrapper.component";
 
-import './main.style.css'
+import './main.style.css';
+import './common.style.css';
+import './markup.style.css';
 
 export const Main: FC = () => {
     return (

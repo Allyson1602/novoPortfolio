@@ -3,7 +3,7 @@
 }
 
 #scrollbar2 .art-table {
-    padding-top: 230px;
+    padding-top: 250px;
 }
 #scrollbar2 .art-table h6 {
     margin: 0;
@@ -27,7 +27,7 @@
     min-width: 290px;
     height: calc(100vh - 30px);
     position: relative;
-    z-index: 999;
+    z-index: 99999;
     -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
     box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
     -webkit-transition: 0.55s ease-in-out;
@@ -55,15 +55,21 @@
 }
 
 .art-app .art-app-wrapper .art-app-container .art-info-bar .art-info-bar-frame .art-info-bar-header .art-info-bar-btn {
+    border: none;
+    background: transparent;
     margin-left: auto;
     pointer-events: all;
     font-size: 14px;
-    padding: 30px; 
+    padding: 30px;
 }
 
 .art-app .art-app-wrapper .art-app-container .art-info-bar .art-info-bar-frame .art-info-bar-header .art-info-bar-btn.art-disabled {
     opacity: 0;
     pointer-events: none;
+}
+
+.art-app .art-app-wrapper .art-app-container .art-info-bar .art-info-bar-frame .art-info-bar-header .art-info-bar-btn svg {
+    color: #8c8c8e;
 }
 
 .art-app .art-app-wrapper .art-app-container .art-info-bar .art-info-bar-frame .art-scroll-frame .scroll-content {
@@ -76,12 +82,12 @@
     top: 0;
     z-index: 99999;
     width: 100%;
-    padding: 30px 0;
-    height: 155px;
+    padding: 30px;
+    height: 235px;
     background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
     text-align: center;
-    -webkit-box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
-    box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1); 
+    -webkit-box-shadow: 0 1px 4px 0 rgb(15 15 20 / 10%);
+    box-shadow: 0 1px 4px 0 rgb(15 15 20 / 10%);
 }
 
 .art-info-bar .art-header .art-avatar {
@@ -168,7 +174,7 @@
 }
 
 .art-info-bar .art-name:hover a {
-    color: #FFC107;
+    color: #ffc107;
 }
 
 .art-info-bar .art-lang-skills {
@@ -271,7 +277,7 @@
     content: "\f00c";
     margin-right: 5px;
     font-size: 9px;
-    color: #FFC107;
+    color: #ffc107;
     margin-right: 10px;
     vertical-align: middle;
 }
