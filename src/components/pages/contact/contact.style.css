@@ -1,3 +1,7 @@
+.contact {
+    overflow: scroll;
+}
+
 .data-contact-information {
     display: flex;
     justify-content: space-around;
@@ -116,39 +120,26 @@
     height: 45px;
 }
 
-.art-submit-frame .art-submit {
+.contact .art-submit-frame .art-submit {
     margin: 0;
     overflow: hidden;
     position: relative;
     z-index: 999;
+    cursor: pointer;
 }
 
 .art-submit-frame .art-submit:focus {
     outline: inherit;
 }
 
-.art-submit-frame .art-success {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: -15px;
-    overflow: hidden;
-    max-width: 150px;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    text-transform: uppercase;
-    color: #fafafc;
-    background: #20202a;
-    letter-spacing: 1.5px;
-    font-weight: 600;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    border: none;
-    height: 0;
-    font-size: 11px;
-    padding: 15px 35px 0;
-    margin: 0;
+.contact .art-success {
+    text-align: center;
+}
+.contact .art-success svg {
+    vertical-align: sub;
+}
+
+.art-submit-frame .message-submit {
+    padding-left: 1em;
+    padding-top: 0.3em;
 }

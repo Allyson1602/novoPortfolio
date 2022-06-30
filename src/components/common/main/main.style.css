@@ -847,116 +847,6 @@ portfolio
   .art-filter a.art-current {
     color: #fafafc; }
 
-/* ----- portfolio items ----- */
-.art-portfolio-item-frame {
-  display: block;
-  width: 100%;
-  outline: inherit;
-  overflow: hidden;
-  -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
-          box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
-  position: relative;
-  padding-bottom: 60%; }
-  .art-portfolio-item-frame img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
-    -webkit-filter: brightness(85%) blur(0);
-            filter: brightness(85%) blur(0);
-    -webkit-transition: 0.4s ease-in-out;
-    transition: 0.4s ease-in-out; }
-  .art-portfolio-item-frame .art-item-hover {
-    width: 27px;
-    height: 27px;
-    -webkit-box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
-            box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
-    border-radius: 50%;
-    position: absolute;
-    color: #fafafc;
-    top: 30px;
-    left: 30px;
-    background: linear-gradient(159deg, rgba(45, 45, 58, 0.88) 0%, rgba(43, 43, 53, 0.88) 100%);
-    font-size: 11px;
-    opacity: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: 0.4s ease-in-out;
-    transition: 0.4s ease-in-out; }
-  .art-portfolio-item-frame:hover .art-item-hover {
-    opacity: 0.5; }
-    .art-portfolio-item-frame:hover .art-item-hover:hover {
-      opacity: 1;
-      -webkit-transform: scale(1.07);
-              transform: scale(1.07); }
-  .art-portfolio-item-frame:hover img {
-    -webkit-transform: scale(1.07);
-            transform: scale(1.07);
-    -webkit-filter: brightness(100%) blur(0);
-            filter: brightness(100%) blur(0); }
-
-.art-grid {
-  -webkit-transition: 0.55s ease-in-out;
-  transition: 0.55s ease-in-out;
-  width: 100%;
-  /* clear fix */ }
-  .art-grid:after {
-    content: '';
-    display: block;
-    clear: both; }
-  .art-grid .art-grid-item {
-    float: left;
-    margin-bottom: 30px;
-    overflow: hidden;
-    position: relative;
-    height: auto;
-    padding: 0 15px; }
-    .art-grid .art-grid-item .art-item-description {
-      position: absolute;
-      z-index: 9;
-      bottom: 0;
-      left: 15px;
-      width: calc(100% - 29px);
-      padding: 30px;
-      background: linear-gradient(159deg, rgba(45, 45, 58, 0.98) 0%, rgba(43, 43, 53, 0.98) 100%);
-      -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
-              box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
-      -webkit-transform: translateY(100%);
-              transform: translateY(100%);
-      -webkit-transition: 0.55s ease-in-out;
-      transition: 0.55s ease-in-out; }
-    .art-grid .art-grid-item:hover .art-item-description {
-      -webkit-transform: translateY(0);
-              transform: translateY(0); }
-  .art-grid.art-grid-2-col .art-grid-item {
-    width: 50%; }
-    .art-grid.art-grid-2-col .art-grid-item .art-portfolio-item-frame.art-horizontal {
-      padding-bottom: 66.7%; }
-    .art-grid.art-grid-2-col .art-grid-item .art-portfolio-item-frame.art-vertical {
-      padding-bottom: 140%; }
-    .art-grid.art-grid-2-col .art-grid-item .art-portfolio-item-frame.art-square {
-      padding-bottom: 90%; }
-  .art-grid.art-grid-3-col .art-grid-item {
-    width: 33.3333%; }
-    .art-grid.art-grid-3-col .art-grid-item .art-portfolio-item-frame.art-horizontal {
-      padding-bottom: 65%; }
-    .art-grid.art-grid-3-col .art-grid-item .art-portfolio-item-frame.art-vertical {
-      padding-bottom: 140%; }
-    .art-grid.art-grid-3-col .art-grid-item .art-portfolio-item-frame.art-square {
-      padding-bottom: 90%; }
-
 /* ----- touch device ----- */
 @media (pointer: coarse) {
   .art-portfolio-item-frame .art-item-hover {
@@ -1230,18 +1120,6 @@ content (after 768px)
     width: 100%; }
   .art-grid.art-grid-3-col .art-grid-item {
     width: 100%; }
-
-  .art-filter {
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    .art-filter a {
-      margin: 0 0 10px; }
 
   .art-m-hidden {
     display: none; } }

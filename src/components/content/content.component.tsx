@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import './content.style.css';
 
@@ -9,6 +9,18 @@ interface IMenuBarProps {
 }
 
 const Content: FC<IMenuBarProps> = ({ barActive, menuActive }: IMenuBarProps) => {
+	const [unmounted, setUnmounted] = useState(false);
+  
+	useEffect(() => {
+		setUnmounted(false);
+  
+		return () => {
+			setUnmounted(true);
+		}
+	}, []);
+
+    if(unmounted) return <></>;
+	
     return (
         <div className={`art-content ${ barActive || menuActive ? 'art-active' : '' }`}>
 
@@ -18,17 +30,9 @@ const Content: FC<IMenuBarProps> = ({ barActive, menuActive }: IMenuBarProps) =>
 				<div className="art-top-bg-overlay"></div>
 			</div>
 
-			<motion.div
-				className="transition-fade"
-				id="swup"
-				initial={{ scale: 0.95, opacity: 0.5 }}
-				animate={{ scale: 1, opacity: 1 }}
-				transition={{ duration: 1 }}
-			>
-				<div id="scrollbar" className="art-scroll-frame">
-					<Outlet />
-				</div>
-			</motion.div>
+			<div id="scrollbar" className="art-scroll-frame">
+				<Outlet />
+			</div>
         </div>
     );
 };
