@@ -48,7 +48,7 @@ const Home: FC = () => {
                                         <Link to="/portfolio" className="art-btn art-btn-md"><span>Ver trabalhos</span></Link>
 
                                         <div className="art-links-frame p-15-15">
-                                            <Link to={cv} className="art-link" download>Baixar currículo <DownloadSimple size={15} weight="bold" /></Link>
+                                            <a href={cv} className="art-link" download target="_blank" rel="noreferrer">Baixar currículo <DownloadSimple size={15} weight="bold" /></a>
                                         </div>
                                     </div>
                                 </div>

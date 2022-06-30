@@ -1,11 +1,11 @@
 import { FC } from "react";
 
 import "./portfolio.style.css";
-import igniteLab from "../../../issets/images/portfolio/ignite-lab.png";
-import pizzaria from "../../../issets/images/portfolio/pizzaria.png";
-import museuNacional from "../../../issets/images/portfolio/museu-nacional.png";
-import conversorMoeda from "../../../issets/images/portfolio/conversor-moeda.png";
-import anizia from "../../../issets/images/portfolio/anizia.png";
+import igniteLab from "../../../issets/images/portfolio/ignite-lab.jpg";
+import pizzaria from "../../../issets/images/portfolio/pizzaria.jpg";
+import museuNacional from "../../../issets/images/portfolio/museu-nacional.jpg";
+import conversorMoeda from "../../../issets/images/portfolio/conversor-moeda.jpg";
+import anizia from "../../../issets/images/portfolio/anizia.jpg";
 import { motion } from "framer-motion";
 
 const Portfolio: FC = () => {
