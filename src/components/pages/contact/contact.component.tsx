@@ -85,11 +85,6 @@ const Contact: FC = () => {
                 process.env.REACT_APP_API_EMAIL_KEY
             )
         ) {
-            console.log(
-                process.env.REACT_APP_API_EMAIL_SERVICE,
-                process.env.REACT_APP_API_EMAIL_TEMPLATE,
-                process.env.REACT_APP_API_EMAIL_KEY
-            )
             emailjs.sendForm(`${process.env.REACT_APP_API_EMAIL_SERVICE}`, `${process.env.REACT_APP_API_EMAIL_TEMPLATE}`, form.current, `${process.env.REACT_APP_API_EMAIL_KEY}`)
               .then((result) => {
                     setMessageSubmit({
