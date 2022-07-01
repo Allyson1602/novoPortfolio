@@ -122,7 +122,7 @@ const Contact: FC = () => {
                                 <div className="art-table p-15-15">
                                     <ul>
                                         <li>
-                                            <h6>Email:</h6><span>athyrsonallyson.work@gmail.com</span>
+                                            <h6>Email:</h6><span>allysonathyrson.work@gmail.com</span>
                                         </li>
                                         <li>
                                             <h6>Discord:</h6><span>Allyson Athyrson#7485</span>
