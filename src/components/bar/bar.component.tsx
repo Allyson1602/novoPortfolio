@@ -33,10 +33,10 @@ const Bar: FC<IBarProps> = ({ menuActive, barActive, setBarActive }: IBarProps) 
 
             <div className="art-header">
               <div className="art-avatar">
-                <Link data-fancybox="avatar" data-no-swup to="img/face-1.jpg" className="art-avatar-curtain">
+                <div className="art-avatar-curtain">
                   <img src={AvatarImage} alt="avatar" />
                   <ArrowsOut size={22} weight="fill" />
-                </Link>
+                </div>
               </div>
               <h5 className="art-name mb-10"><Link to="home.html">Allyson Athyrson</Link></h5>
               <div className="art-sm-text">Full-stack Developer</div>
