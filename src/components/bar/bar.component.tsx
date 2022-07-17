@@ -38,7 +38,7 @@ const Bar: FC<IBarProps> = ({ menuActive, barActive, setBarActive }: IBarProps) 
                   <ArrowsOut size={22} weight="fill" />
                 </div>
               </div>
-              <h5 className="art-name mb-10"><Link to="home.html">Allyson Athyrson</Link></h5>
+              <h5 className="art-name mb-10"><Link to="/">Allyson Athyrson</Link></h5>
               <div className="art-sm-text">Full-stack Developer</div>
             </div>
 
