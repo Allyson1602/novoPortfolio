@@ -73,7 +73,7 @@ const Portfolio: FC = () => {
                             <div className="art-item-description">
                                 <h5 className="mb-15">Portfólio Anizia</h5>
                                 <div className="mb-15">Portfólio de uma profissional da saúde.</div>
-                                <a href="https://allyson1602.github.io/portfolio-anizia/" className="art-link art-color-link art-w-chevron" target="_blank" rel="noreferrer">Ver mais</a>
+                                <a href="https://aniziacassiano.com.br/" className="art-link art-color-link art-w-chevron" target="_blank" rel="noreferrer">Ver mais</a>
                             </div>
                         </div>
                     </div>
