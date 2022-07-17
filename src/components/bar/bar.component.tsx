@@ -204,7 +204,7 @@ const Bar: FC<IBarProps> = ({ menuActive, barActive, setBarActive }: IBarProps) 
 
 					<div className="art-hard-skills-item">
 					<div className="art-skill-heading">
-						<h6>PHP</h6>
+						<h6>Wordpress</h6>
 					</div>
 					<div className="art-line-progress">
 						<div id="lineprog4">
